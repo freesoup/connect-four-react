@@ -141,9 +141,9 @@ class Game extends React.Component {
         location = 'Location: (' + step.playRow + ',' + step.playCol + ')'
       }
       return (
-        <li key={move}>
-          <button className={move === this.state.stepNumber ? 'boldbutton' : ''} onClick={() => this.jumpTo(move)}>{desc} {location}</button>
-        </li>
+        <div className="history-button-container" key={move}>
+          <button className={`history-button ${move === this.state.stepNumber ? 'boldbutton' : ''}`} onClick={() => this.jumpTo(move)}>{desc} {location}</button>
+        </div>
       );
     });
 
@@ -157,6 +157,11 @@ class Game extends React.Component {
       status = 'Next player: '
     }
 
+    let nextPlayerIndicator = [];
+    if (!winner && !gameIsDraw) {
+      nextPlayerIndicator.push(<div className={`minisquare ${this.state.xIsNext? 'squarePlayerX' : 'squarePlayerO'}`}></div>)
+    }
+
     return (
       <div className="game">
         <div className="game-board">
@@ -164,11 +169,12 @@ class Game extends React.Component {
             squares={current.squares}
             onClick={(col) => this.handleClick(col)}
           />
+          <div>{ status }</div>
+          {nextPlayerIndicator}
         </div>
         <div className="game-info">
-          <div>{ status }</div>
-          <div className={`minisquare ${this.state.xIsNext? 'squarePlayerX' : 'squarePlayerO'}`}></div>
-          <ol>{ moves }</ol>
+          <div className="history-title"><h1>History</h1></div>
+          <div>{ moves }</div>
         </div>
       </div>
     );
