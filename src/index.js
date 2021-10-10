@@ -150,15 +150,18 @@ class Game extends React.Component {
 
     let status;
     if (winner) {
-      status = 'Winner: ' + winner
+      status = 'Winner'
     } else if (gameIsDraw) {
-      status = 'Draw!'
+      status = 'Draw'
     } else {
-      status = 'Next player: '
+      status = 'Next Player'
     }
 
     let nextPlayerIndicator = [];
-    if (!winner && !gameIsDraw) {
+
+    if (winner) {
+      nextPlayerIndicator.push(<div className={`minisquare ${winner === 'X' ? 'squarePlayerX' : 'squarePlayerO'}`}></div>)
+    }else if (!gameIsDraw) {
       nextPlayerIndicator.push(<div className={`minisquare ${this.state.xIsNext? 'squarePlayerX' : 'squarePlayerO'}`}></div>)
     }
 
@@ -169,8 +172,10 @@ class Game extends React.Component {
             squares={current.squares}
             onClick={(col) => this.handleClick(col)}
           />
-          <div>{ status }</div>
-          {nextPlayerIndicator}
+          <div className="game-state">
+            <div class="game-logo"><h1>Connect-4</h1></div>
+            <div class="game-result">{ status }{nextPlayerIndicator}</div>
+          </div>
         </div>
         <div className="history-bar">
           <div className="history-title"><h1>History</h1></div>

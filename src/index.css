@@ -19,14 +19,28 @@ ol, ul {
 
 .board-container {
   display: flex;
+  background-color: #ad6200;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  border-radius: 10%;
+  padding : 25px;
+  margin: 20px auto;
+  filter: drop-shadow(0 0 0.4rem black);}
+
+.game-state {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
 }
 
 .board-col {
-  border: 3px solid transparent;
+  border: 4px solid transparent;
 }
 
 .board-col:hover {
-  border: 3px solid #DC143C
+  border: 4px dotted #DC143C
 }
 
 .board-row:after {
@@ -45,13 +59,12 @@ ol, ul {
   float: left;
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: 2px;
-  margin-top: 2px;
+  line-height: 55px;
+  height: 55px;
+  margin: 3px 1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 55px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -66,7 +79,7 @@ ol, ul {
 }
 
 .squareDefault {
-  background-color: transparent;
+  background: #169fde;;
 }
 
 .square:focus {
@@ -82,9 +95,13 @@ ol, ul {
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
+  background-color: #169fde;
 }
 
 .game-board {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .history-bar {
@@ -133,9 +150,31 @@ ol, ul {
   font-weight: bold;
 }
 
+
+.game-logo {
+  color: white;
+  font-family: impact;
+  font-weight: bold;
+  font-size: 30px;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  text-shadow: 1px 1px 2px black;
+}
+
+.game-result {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  width:50%;
+  text-align: center;
+  margin: auto;
+}
+
 .minisquare {
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  width: 40px;
+  margin: auto;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
