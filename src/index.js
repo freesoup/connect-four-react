@@ -4,8 +4,7 @@ import './index.css';
 
 function Square(props) {
   return (
-    <div><button className="square">
-      {props.value}
+    <div><button className={`square ${!props.value ? "squareDefault" : props.value==='X' ? "squarePlayerX" : "squarePlayerO"}`}>
     </button></div>
   );
 }
@@ -150,7 +149,7 @@ class Game extends React.Component {
     if (winner) {
       status = 'Winner: ' + winner
     } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+      status = 'Next player: '
     }
 
     return (
@@ -163,6 +162,7 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{ status }</div>
+          <div className={`minisquare ${this.state.xIsNext? 'squarePlayerX' : 'squarePlayerO'}`}></div>
           <ol>{ moves }</ol>
         </div>
       </div>
