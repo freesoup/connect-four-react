@@ -172,9 +172,11 @@ class Game extends React.Component {
           <div>{ status }</div>
           {nextPlayerIndicator}
         </div>
-        <div className="game-info">
+        <div className="history-bar">
           <div className="history-title"><h1>History</h1></div>
-          <div>{ moves }</div>
+          <div className="game-info">
+            <div>{ moves }</div>
+          </div>
         </div>
       </div>
     );
