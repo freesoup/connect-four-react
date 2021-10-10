@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/connect-four-react/static/css/main.fc502c17.chunk.css",
+    "main.js": "/connect-four-react/static/js/main.8509a601.chunk.js",
+    "main.js.map": "/connect-four-react/static/js/main.8509a601.chunk.js.map",
+    "runtime-main.js": "/connect-four-react/static/js/runtime-main.59deeceb.js",
+    "runtime-main.js.map": "/connect-four-react/static/js/runtime-main.59deeceb.js.map",
+    "static/js/2.0a1bb7c1.chunk.js": "/connect-four-react/static/js/2.0a1bb7c1.chunk.js",
+    "static/js/2.0a1bb7c1.chunk.js.map": "/connect-four-react/static/js/2.0a1bb7c1.chunk.js.map",
+    "index.html": "/connect-four-react/index.html",
+    "static/css/main.fc502c17.chunk.css.map": "/connect-four-react/static/css/main.fc502c17.chunk.css.map",
+    "static/js/2.0a1bb7c1.chunk.js.LICENSE.txt": "/connect-four-react/static/js/2.0a1bb7c1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.59deeceb.js",
+    "static/js/2.0a1bb7c1.chunk.js",
+    "static/css/main.fc502c17.chunk.css",
+    "static/js/main.8509a601.chunk.js"
+  ]
+}
