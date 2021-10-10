@@ -21,8 +21,12 @@ ol, ul {
   display: flex;
 }
 
+.board-col {
+  border: 3px solid transparent;
+}
+
 .board-col:hover {
-  border: 1px solid #DC143C
+  border: 3px solid #DC143C
 }
 
 .board-row:after {
